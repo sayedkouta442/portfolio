@@ -1,0 +1,54 @@
+{
+   "checksum": "972341905d19669ee7db57b67899be2f",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13374580552481567",
+            "date_last_used": "0",
+            "guid": "bc507f83-90d7-4941-a511-7dbb00abf827",
+            "id": "6",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Book 1.xlsx",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://onedrive.live.com/personal/b97e535f52cdc0fe/_layouts/15/doc.aspx?resid=0eb04af3-20d2-42d2-892a-65f2e4b2a361&cid=b97e535f52cdc0fe&action=editNew&wdOrigin=MARKETING.EXCEL.SIGNUP%2CAPPHOME-WEB.BANNER.NEWBLANK&wdPreviousSession=fc040aa6-520d-4efa-b405-ec8db68f1643&wdPreviousSessionSrc=AppHomeWeb&ct=1730106939643",
+            "visit_count": 1
+         } ],
+         "date_added": "13398705941711984",
+         "date_last_used": "0",
+         "date_modified": "13374580552481567",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Favorites bar",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13398705941711984",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other favorites",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13398705941711984",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile favorites",
+         "source": "unknown",
+         "type": "folder"
+      }
+   },
+   "sync_metadata": "CkEKHgiIgQISCD/lYHCYAQAAKg4QABgBIAAoBjAAOABAABIAKhhaOG9BaEhnbXgxNnhaNUowS3lpZU93PT1IA6AGDBKOAQgBEokBChx5eEovNmZ2a2VjcjdrcDVFUXpCNHRXTHBkYkU9EiRkMzEzODE4ZC1jNDNmLTU5OTktYThiMC0wYWY1NzFkMjAyMDQYACAAKAAwvoTaxoYyOJmI2saGMkCZiNrGhjJKHGFSQ1dMZ2hGOWI1SW5xS0lEdnVKL2p2UWtGYz1aAGUAAAAAwj4CYAASjgEIAhKJAQocWWNTVG9udkVTUHdxQ3M0TDJjclZodjY4TDk4PRIkNDQyNDIzZWItNjAyZi01N2JiLWJjZmEtOTc4ZmZiOTg5NzJmGAAgACgAML+E2saGMji7iNrGhjJAu4jaxoYyShxvUFZraHdCUmJWNjVLQ1dSMitJT05IV29PdTg9WgBlAAAAAMI+AmAAEqwBCAYSpwEKHHBVajlEV3NqbXZUclFDeXJHWU42U25OcmwwYz0SJGJjNTA3ZjgzLTkwZDctNDk0MS1hNTExLTdkYmIwMGFiZjgyNxgAIAAoADDthaWTrTI4he+kk60yQIXvpJOtMkocODA5akhOWjRMTmpRU0NNd0NQU3JQZk5vSGxJPVoeIhxGU01zNDdQeEJtNHc2QllqNm9iZ2N5aXpKM0U9ZX4gtu/CPgJgBRKOAQgDEokBChxuamdEdTg4ZUNydlhwODZwRDdmSEdjcUZwODg9EiQ5MmZlNTFlMy01NTA1LTU1YzAtOWVkMy0xNTQzZGI0OGNlODIYACAAKAAwxITaxoYyOPiI2saGMkD4iNrGhjJKHHl6TkIwMWNuNTRBN2NSVTB1VCsvUGdtVHRVbz1aAGUAAAAAwj4CYAAwADgA",
+   "version": 1
+}
