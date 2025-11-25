@@ -69,7 +69,11 @@ class MySKills extends StatelessWidget {
         AnimatedLinearProgressIndicator(
             percentage: 0.9, title: 'Dart', image: 'assets/icons/dart.png'),
         AnimatedLinearProgressIndicator(
-            percentage: 0.6,
+            percentage: 0.8,
+            title: 'Rest APIs',
+            image: 'assets/icons/flutter.png'),
+        AnimatedLinearProgressIndicator(
+            percentage: 0.7,
             title: 'Firebase',
             image: 'assets/icons/firebase.png'),
         AnimatedLinearProgressIndicator(
@@ -88,6 +92,10 @@ class MySKills extends StatelessWidget {
             percentage: 0.8, title: 'Bloc', image: 'assets/icons/bloc.png'),
         AnimatedLinearProgressIndicator(
             percentage: 0.93, title: 'Hive', image: 'assets/images/hive.png'),
+        AnimatedLinearProgressIndicator(
+            percentage: 0.8,
+            title: 'Store Deployment',
+            image: 'assets/icons/google-play.png'),
       ],
     );
   }

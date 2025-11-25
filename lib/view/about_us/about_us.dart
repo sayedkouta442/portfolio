@@ -6,9 +6,50 @@ import 'package:url_launcher/url_launcher.dart';
 class AboutUsView extends StatelessWidget {
   const AboutUsView({super.key});
 
-  final String aboutMeContent = """
-I'm Elsayed Kouta, a passionate and detail-oriented Flutter Developer dedicated to crafting high-performing and visually appealing mobile and web applications. 🚀 With a solid foundation in Dart and mobile UI/UX, I specialize in building responsive and scalable solutions, ensuring a seamless and delightful user experience. My expertise extends to clean architecture principles, state management with Bloc and Cubit, and robust API integrations. I'm adept at leveraging technologies like Firebase, Supabase, Hive, and SQLite to create dynamic and efficient applications. Committed to clean code and innovative problem-solving, I thrive in collaborative environments and am eager to contribute to impactful, user-focused projects. Let's transform your ideas into reality! 💡📱💡
-""";
+  final List<Map<String, dynamic>> aboutSections = const [
+    {
+      "icon": FontAwesomeIcons.laptopCode,
+      "iconColor": Color(0xFF42A5F5), // Blue
+      "title": "Flutter Developer",
+      "content":
+          "Dedicated Flutter Developer passionate about building high-quality, fast, and visually refined mobile & web applications."
+    },
+    {
+      "icon": FontAwesomeIcons.palette,
+      "iconColor": Color(0xFFFFA726), // Orange
+      "title": "UI & UX",
+      "content":
+          "Specialize in responsive interfaces with smooth experiences and modern design principles."
+    },
+    {
+      "icon": FontAwesomeIcons.buildingColumns,
+      "iconColor": Color(0xFFAB47BC), // Purple
+      "title": "Clean Architecture",
+      "content":
+          "Follow clean architecture and maintainable code practices to ensure scalability and long-term project success."
+    },
+    {
+      "icon": FontAwesomeIcons.cogs,
+      "iconColor": Color(0xFF26A69A), // Teal
+      "title": "State Management",
+      "content":
+          "Experienced with Bloc & Cubit for predictable, robust, and organized app state handling."
+    },
+    {
+      "icon": FontAwesomeIcons.globe,
+      "iconColor": Color(0xFFFF7043), // Coral
+      "title": "API Integration",
+      "content":
+          "Skilled in integrating APIs seamlessly to deliver dynamic and reliable app functionality."
+    },
+    {
+      "icon": FontAwesomeIcons.rocket,
+      "iconColor": Color(0xFFFFCA28), // Yellow
+      "title": "Goal",
+      "content":
+          "I love turning ideas into real products that feel great to use—combining performance, clean code, and user-focused design."
+    },
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -16,63 +57,93 @@ I'm Elsayed Kouta, a passionate and detail-oriented Flutter Developer dedicated 
     bool isSmallScreen = screenSize.width < 600;
     bool isMediumScreen = screenSize.width >= 600 && screenSize.width < 1200;
 
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Text(
-          'About Me ✨',
-          style: TextStyle(
-              fontSize: isSmallScreen ? 30 : (isMediumScreen ? 40 : 50),
+    return SingleChildScrollView(
+      padding: const EdgeInsets.symmetric(vertical: 40),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Text(
+            'About Me ✨',
+            style: TextStyle(
+              fontSize: isSmallScreen ? 34 : (isMediumScreen ? 44 : 56),
               fontWeight: FontWeight.bold,
               color: Colors.white,
-              height: 1.5),
-          textAlign: TextAlign.center,
-        ),
-        const SizedBox(height: 30),
-        Container(
-          constraints: BoxConstraints(
-            maxWidth: isSmallScreen
-                ? screenSize.width * 0.9
-                : (isMediumScreen
-                    ? screenSize.width * 0.7
-                    : screenSize.width * 0.5),
-          ),
-          child: Text(
-            aboutMeContent,
-            style: TextStyle(
-              fontSize: isSmallScreen ? 16 : (isMediumScreen ? 18 : 20),
-              color: Colors.white70,
-              height: 1.6,
+              shadows: const [
+                Shadow(
+                  color: Colors.black45,
+                  offset: Offset(1, 1),
+                  blurRadius: 2,
+                ),
+              ],
             ),
             textAlign: TextAlign.center,
           ),
-        ),
-        // const SizedBox(height: 20),
-        const ContactButton(),
-        // ElevatedButton(
-        //   onPressed: () {
-        //     // Add your contact me action here
-        //     print('Contact Me Button Pressed!');
-        //   },
-        //   style: ElevatedButton.styleFrom(
-        //     padding: EdgeInsets.symmetric(
-        //       horizontal: isSmallScreen ? 40 : 60,
-        //       vertical: isSmallScreen ? 18 : 22,
-        //     ),
-        //     backgroundColor: const Color(0xFF42A5F5), // A shade of blue
-        //     foregroundColor: Colors.white,
-        //     shape: RoundedRectangleBorder(
-        //       borderRadius: BorderRadius.circular(10),
-        //     ),
-        //     elevation: 5, // Add some shadow for depth
-        //   ),
-        //   child: Text(
-        //     'Contact Me',
-        //     style: TextStyle(fontSize: isSmallScreen ? 16 : 20),
-        //   ),
-        // ),
-      ],
+          const SizedBox(height: 25),
+          ConstrainedBox(
+            constraints: BoxConstraints(
+              maxWidth: isSmallScreen
+                  ? screenSize.width * 0.9
+                  : (isMediumScreen
+                      ? screenSize.width * 0.65
+                      : screenSize.width * 0.5),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: aboutSections
+                  .map(
+                    (section) => Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 8),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Icon(
+                            section['icon'],
+                            color: section['iconColor'],
+                            size: isSmallScreen ? 22 : 26,
+                          ),
+                          const SizedBox(width: 12),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  section['title'],
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: isSmallScreen ? 16 : 18,
+                                    color: Colors.white,
+                                    shadows: const [
+                                      Shadow(
+                                        color: Colors.black26,
+                                        offset: Offset(0.5, 0.5),
+                                        blurRadius: 1,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                const SizedBox(height: 4),
+                                Text(
+                                  section['content'],
+                                  style: TextStyle(
+                                    fontSize: isSmallScreen ? 15 : 17,
+                                    color: Colors.white70,
+                                    height: 1.4,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  )
+                  .toList(),
+            ),
+          ),
+          const SizedBox(height: 12),
+          const ContactButton(),
+        ],
+      ),
     );
   }
 }
@@ -90,44 +161,43 @@ class ContactButton extends StatelessWidget {
         },
         borderRadius: BorderRadius.circular(defaultPadding + 10),
         child: Container(
-            padding: const EdgeInsets.all(16),
-            height: 60,
-            width: 150,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(defaultPadding),
-                gradient: LinearGradient(colors: [
-                  Colors.pink,
-                  Colors.blue.shade900,
-                ]),
-                boxShadow: const [
-                  BoxShadow(
-                      color: Colors.blue,
-                      offset: Offset(0, -1),
-                      blurRadius: defaultPadding / 4),
-                  BoxShadow(
-                      color: Colors.red,
-                      offset: Offset(0, 1),
-                      blurRadius: defaultPadding / 4),
-                ]),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                const Icon(
-                  FontAwesomeIcons.whatsapp,
-                  color: Colors.greenAccent,
-                  size: 15,
-                ),
-                const SizedBox(width: defaultPadding / 4),
-                Text(
-                  'Contact Me',
-                  style: Theme.of(context).textTheme.labelMedium!.copyWith(
+          padding: const EdgeInsets.all(16),
+          height: 50,
+          width: 140,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(defaultPadding),
+            gradient: LinearGradient(
+              colors: [
+                Colors.pink.shade400,
+                Colors.blue.shade900,
+              ],
+            ),
+            boxShadow: const [
+              BoxShadow(
+                  color: Colors.blue, offset: Offset(0, -1), blurRadius: 2),
+              BoxShadow(color: Colors.red, offset: Offset(0, 1), blurRadius: 2),
+            ],
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Icon(
+                FontAwesomeIcons.whatsapp,
+                color: Colors.greenAccent,
+                size: 16,
+              ),
+              const SizedBox(width: defaultPadding / 4),
+              Text(
+                'Contact Me',
+                style: Theme.of(context).textTheme.labelMedium!.copyWith(
                       color: Colors.white,
                       letterSpacing: 1.2,
-                      fontWeight: FontWeight.bold),
-                ),
-              ],
-            )),
+                      fontWeight: FontWeight.bold,
+                    ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

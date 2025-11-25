@@ -4,14 +4,14 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../../../res/constants.dart';
 
-class DownloadButton extends StatelessWidget {
-  const DownloadButton({super.key});
+class DownloadCVButton extends StatelessWidget {
+  const DownloadCVButton({super.key});
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
         launchUrl(Uri.parse(
-            'https://drive.google.com/file/d/1ly5Jc7x-JTrMw5bngKPiGw-IrTqw87mq/view?usp=drive_link'));
+            'https://drive.google.com/file/d/1FopoZLVmd09KmiiMp74y0iWjCwatmB8I/view?usp=drivesdk'));
       },
       child: Container(
         alignment: Alignment.center,

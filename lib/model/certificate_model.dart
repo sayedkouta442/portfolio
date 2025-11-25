@@ -31,14 +31,7 @@ List<CertificateModel> certificateList = [
     credential:
         'https://www.udemy.com/certificate/UC-796587ed-76d9-4b39-9c56-8e65e2ea02cf/',
   ),
-  CertificateModel(
-    name: 'Data Analysis: Skills for the Freelance Professional',
-    organization: 'NTI',
-    date: 'Jan 2025',
-    skills: 'Data Analysis, SQL, Excel, Power BI',
-    credential:
-        'https://drive.google.com/file/d/1MHblCunoEZfDfMEa-mMwYQsdbC_S5J5j/view?usp=sharing',
-  ),
+
   CertificateModel(
     name: 'Mastering Flutter: Responsive & Adaptive UI Design',
     organization: 'Udemy',
@@ -56,13 +49,22 @@ List<CertificateModel> certificateList = [
     credential:
         'https://drive.google.com/file/d/1addt3Ge6jAAWhmbvEmwgpK2b4WcSkBRo/view?usp=sharing',
   ),
-  // CertificateModel(
-  //   name: 'Powering Your App with Live Web Data',
-  //   organization: 'LinkedIn',
-  //   date: 'JUL 2023',
-  //   skills: 'Flutter . Dart . Firebase . API\'s',
-  //   credential:  'https://www.linkedin.com/learning/certificates/643f05463ae529f24bd9ea66a6ead9a20469bdb875a9ddda048c698eda3ee7c1',
-  // ),
+  CertificateModel(
+    name: "Deep Dive into Clean Architecture in Flutter[Arabic]",
+    organization: 'LinkedIn',
+    date: 'Nov 2024',
+    skills: 'Flutter, Dart, Clean Archtictuer',
+    credential:
+        'https://www.udemy.com/certificate/UC-92628a91-2052-427c-9a2f-62f3356ed0b2/',
+  ),
+  CertificateModel(
+    name: 'Data Analysis: Skills for the Freelance Professional',
+    organization: 'NTI',
+    date: 'Jan 2025',
+    skills: 'Data Analysis, SQL, Excel, Power BI',
+    credential:
+        'https://drive.google.com/file/d/1MHblCunoEZfDfMEa-mMwYQsdbC_S5J5j/view?usp=sharing',
+  ),
   // CertificateModel(
   //   name: 'Firebase Cloud Firestore',
   //   organization: 'LinkedIn',
